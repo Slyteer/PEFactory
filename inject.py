@@ -2,7 +2,7 @@ import pefile
 import mmap
 import os
 
-
+""" j'ai taffé le projet"""
 def align(val_to_align, alignment):
     return ((val_to_align + alignment - 1) / alignment) * alignment
 
