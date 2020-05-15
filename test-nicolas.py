@@ -5,6 +5,7 @@ import os
 import pefile
 import argparse
 
+
 # ASLR Status Checker / Disabler
 def AslrStatus():
 
