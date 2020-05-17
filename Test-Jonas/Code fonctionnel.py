@@ -31,7 +31,7 @@ def adjust_SectionSize(size, align):
     return size
 
 
-pe = pefile.PE('ProtonVPN_win_v1.14.3.exe')
+pe = pefile.PE('../putty.exe')
 
 new_section = pefile.SectionStructure(pe.__IMAGE_SECTION_HEADER_format__)
 number_sections = pe.FILE_HEADER.NumberOfSections - 1
