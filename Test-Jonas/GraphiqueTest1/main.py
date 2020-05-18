@@ -23,6 +23,7 @@ def form():
     print(entries)
     interface.infect()
     interface.close()
+
     # PYTHON TU ES DU VOMIS DE CHAT QUAND JE LANCE UNE FONCTION PREND LES ARGUMENT LA PAS AVANT SALLE VACHE TU PU T MOCHE
 
     interface.mainloop()
