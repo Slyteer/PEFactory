@@ -19,7 +19,7 @@ def form():
 
     fields = ('Path to the exe', 'Path to the infected exe', 'Name of the section')
     entries = interface.makeform(fields)
-    interface.bind('<Return>', (lambda event, e=entries: fetch(e)))
+    interface.bind('<Return>', (event, print(entries.get())))
     print(entries)
     interface.infect()
     interface.close()

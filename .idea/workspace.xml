@@ -20,13 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f822ad9-91a0-457c-b461-f6d08d6c7792" name="Default Changelist" comment="test commit from pycharm">
-      <change afterPath="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/form.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/injection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/window.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PEFactory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PEFactory.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/form_cpy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test-Jonas/Code fonctionnel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test-Jonas/Code fonctionnel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/form.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/main.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,24 +34,22 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/PEFactory$home.coverage" NAME="home Coverage Results" MODIFIED="1589741369301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Graphical Interface/GUI" />
+    <SUITE FILE_PATH="coverage/PEFactory$guitest.coverage" NAME="guitest Coverage Results" MODIFIED="1589835515468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test-Bruno/testing/gui_test" />
     <SUITE FILE_PATH="coverage/PEFactory$form.coverage" NAME="form Coverage Results" MODIFIED="1589748082375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1" />
-    <SUITE FILE_PATH="coverage/PEFactory$cli_PEFactoty.coverage" NAME="cli_PEFactoty Coverage Results" MODIFIED="1589741526423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test-Bruno" />
+    <SUITE FILE_PATH="coverage/PEFactory$cli_PEFactoty.coverage" NAME="cli_PEFactoty Coverage Results" MODIFIED="1589834906446" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test-Bruno" />
     <SUITE FILE_PATH="coverage/PEFactory$GraphiqueTest1.coverage" NAME="GraphiqueTest1 Coverage Results" MODIFIED="1589741534488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test-Jonas" />
     <SUITE FILE_PATH="coverage/PEFactory$window__1_.coverage" NAME="window (1) Coverage Results" MODIFIED="1589741679441" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1" />
-    <SUITE FILE_PATH="coverage/PEFactory$main.coverage" NAME="main Coverage Results" MODIFIED="1589757641443" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1" />
+    <SUITE FILE_PATH="coverage/PEFactory$main.coverage" NAME="main Coverage Results" MODIFIED="1589842288716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1" />
     <SUITE FILE_PATH="coverage/PEFactory$Code_fonctionnel__1_.coverage" NAME="Code fonctionnel (1) Coverage Results" MODIFIED="1589407300534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Test-Jonas" />
     <SUITE FILE_PATH="coverage/PEFactory$window.coverage" NAME="window Coverage Results" MODIFIED="1589405554692" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Graphical Interface/GUI" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test-Jonas/Code fonctionnel.py">
+        <entry file="file://$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/form.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="70" column="36" lean-forward="true" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="16" column="62" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -62,32 +57,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="121" selection-start-line="25" selection-start-column="121" selection-end-line="25" selection-end-column="121" />
+            <state relative-caret-position="357">
+              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
               <folding>
                 <element signature="e#70#91#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/form.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/injection.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="80" column="26" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -117,6 +91,8 @@
         <option value="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/window.py" />
         <option value="$PROJECT_DIR$/Test-Jonas/Code fonctionnel.py" />
         <option value="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/injection.py" />
+        <option value="$PROJECT_DIR$/Test-Bruno/testing/gui_test/guitest.py" />
+        <option value="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/form_cpy.py" />
         <option value="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/form.py" />
         <option value="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/main.py" />
       </list>
@@ -159,7 +135,7 @@
             <path>
               <item name="PEFactory" type="b2602c69:ProjectViewProjectNode" />
               <item name="PEFactory" type="462c0819:PsiDirectoryNode" />
-              <item name="Test-Bruno" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PEFactory" type="b2602c69:ProjectViewProjectNode" />
@@ -195,13 +171,14 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jonas\OneDrive\Documents\PEFactory\Test-Jonas\GraphiqueTest1" />
+      <recent name="C:\Users\jonas\OneDrive\Documents\PEFactory\Test-Bruno\testing\gui_test" />
+      <recent name="C:\Users\jonas\OneDrive\Documents\PEFactory\Test-Jonas" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jonas\OneDrive\Documents\PEFactory\Test-Jonas\GraphiqueTest1" />
       <recent name="C:\Users\Arthur\Desktop\Projet annuel\PEFactory\Test Arthur Exploit" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jonas\OneDrive\Documents\PEFactory\Test-Jonas\GraphiqueTest1" />
-      <recent name="C:\Users\jonas\OneDrive\Documents\PEFactory\Test-Jonas" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -217,28 +194,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="GraphiqueTest1" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="PEFactory" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test-Jonas" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\jonas\OneDrive\Documents\PEFactory\Test-Jonas\GraphiqueTest1\main.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="cli_PEFactoty" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PEFactory" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -275,6 +230,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/form.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="guitest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PEFactory" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test-Bruno/testing/gui_test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test-Bruno/testing/gui_test/guitest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -330,10 +307,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.guitest" />
+        <item itemvalue="Python.cli_PEFactoty" />
         <item itemvalue="Python.form" />
         <item itemvalue="Python.window (1)" />
-        <item itemvalue="Python.GraphiqueTest1" />
-        <item itemvalue="Python.cli_PEFactoty" />
       </list>
     </recent_temporary>
   </component>
@@ -350,6 +327,7 @@
       <workItem from="1589384901884" duration="766000" />
       <workItem from="1589402463110" duration="3770000" />
       <workItem from="1589741059166" duration="11644000" />
+      <workItem from="1589831832733" duration="7709000" />
     </task>
     <task id="LOCAL-00001" summary="test commit from pycharm">
       <created>1589039496275</created>
@@ -369,7 +347,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16180000" />
+    <option name="totallyTimeSpent" value="23889000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2064" height="1128" extended-state="6" />
@@ -377,10 +355,10 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.18313374" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.18512975" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286432" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38090453" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -513,16 +491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test-Bruno/cli_PEFactoty.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#60#89#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test-Jonas/PEFunctions.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -546,37 +514,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/form.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="23" column="28" selection-start-line="23" selection-start-column="28" selection-end-line="23" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/injection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="80" column="26" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test-Jonas/Code fonctionnel.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="70" column="36" lean-forward="true" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
+        <state relative-caret-position="1173">
+          <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/injection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="80" column="26" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Bruno/scripts/menu.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Bruno/scripts/hello.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Bruno/scripts/ascii_art.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Bruno/scripts/functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" selection-start-line="14" selection-end-line="22" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Bruno/Windows_cli.bat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Bruno/Requirements-readme.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Bruno/cli_PEFactory.bat">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Bruno/cli_PEFactoty.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#60#89#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-nicolas.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2933" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Bruno/testing/gui_test/guitest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/form_cpy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="659">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/form.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="16" column="62" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="121" selection-start-line="25" selection-start-column="121" selection-end-line="25" selection-end-column="121" />
+        <state relative-caret-position="357">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
           <folding>
             <element signature="e#70#91#0" expanded="true" />
           </folding>

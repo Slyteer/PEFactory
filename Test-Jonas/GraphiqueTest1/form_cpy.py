@@ -23,10 +23,6 @@ class Form(Frame):
             data = file.read()
             print(data)
             file.close()
-        print(file)
-
-    def test(self,event):
-        print(event)
 
 
     def makeform(self, fields):
@@ -41,7 +37,6 @@ class Form(Frame):
                 btn.pack(side=RIGHT, expand=YES)
             row.pack(side=TOP, padx=5, pady=5)
             lab.pack(side=LEFT)
-            ent.bind('<Return>', self.test)
             ent.pack(side=RIGHT, expand=YES, fill=X)
             entries[field] = ent
             i +=1
@@ -51,18 +46,13 @@ class Form(Frame):
     def input(self, inputVar):
         label = Label(self, text=inputVar)
         label.pack()
+
         entree = Entry(self, width=30)
         entree.pack()
         return entree
 
-    def inputFile(self, inputVar):
-        label = Label(self, text=inputVar)
-        label.pack()
-        btn = Button(text='Browse a file', command=lambda: Form.browseButton(self))
-        btn.pack(side=RIGHT, expand=YES)
-        entree = Entry(self, width=30)
-        entree.pack()
-        return entree
+
+
 
     def genInput(self):
 
