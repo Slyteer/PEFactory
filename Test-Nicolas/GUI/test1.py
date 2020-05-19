@@ -42,4 +42,3 @@ btn.grid(column=2, row=6)
 
 window.mainloop()
 
-
