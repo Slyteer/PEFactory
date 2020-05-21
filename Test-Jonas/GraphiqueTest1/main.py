@@ -22,8 +22,6 @@ def form():
     entries = interface.makeform(fields)
     b1 = Button(interface, text='Inject',
                 command=(lambda e=entries: interface.infect(e)))
-    btn = Button(text='Browse a file', command=lambda: Form.browseButton(interface))
-    btn.pack(side=RIGHT, expand=YES)
     b1.pack()
 
 

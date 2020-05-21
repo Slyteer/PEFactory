@@ -5,9 +5,6 @@ class Form(Frame):
     def __init__(self, fenetre, **kwargs):
         Frame.__init__(self, fenetre, width=768, height=576, **kwargs)
         self.pack(fill=BOTH)
-        self.pathExe = None
-        self.pathBadExe = None
-        self.nameSec = None
 
     def close(self):
         bouton = Button(self, text="Close", command=self.quit)
@@ -21,8 +18,11 @@ class Form(Frame):
         pathToBadExe = entries['Path to the infected exe'].get()
         print('Path to the infected exe', pathToBadExe)
 
-        sectioName = entries['Name of the section'].get()
-        print('Name of the section', sectioName)
+        sectionName = entries['Name of the section'].get()
+        print('Name of the section', sectionName)
+
+        inject = Injection(pathToExe,pathToBadExe,sectionName)
+        inject.infect()
 
     def browseButton(self):
         file = filedialog.askopenfile(mode='rb', title='Browse a file',filetypes =[('Exe files', '*.exe')])
