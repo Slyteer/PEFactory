@@ -13,9 +13,16 @@ class Form(Frame):
         bouton = Button(self, text="Close", command=self.quit)
         bouton.pack()
 
-    def infect(self):
-        bouton = Button(self, text="Infect", command=self.quit)
-        bouton.pack()
+    def infect(self,entries):
+        # period rate:
+        pathToExe = entries['Path to the exe'].get()
+        print('Path to the exe', pathToExe)
+
+        pathToBadExe = entries['Path to the infected exe'].get()
+        print('Path to the infected exe', pathToBadExe)
+
+        sectioName = entries['Name of the section'].get()
+        print('Name of the section', sectioName)
 
     def browseButton(self):
         file = filedialog.askopenfile(mode='rb', title='Browse a file',filetypes =[('Exe files', '*.exe')])
@@ -25,28 +32,20 @@ class Form(Frame):
             file.close()
         print(file)
 
-    def test(self,event):
-        print(event)
 
 
-    def makeform(self, fields):
+
+    def makeform(self,fields):
         entries = {}
-        i=0
         for field in fields:
             row = Frame(self)
-            lab = Label(row, width=22, text=field + " : ", anchor='w')
+            lab = Label(row, width=22, text=field + ": ", anchor='w')
             ent = Entry(row)
-            if (i<=1):
-                btn = Button(text='Browse a file', command=lambda: Form.browseButton(self))
-                btn.pack(side=RIGHT, expand=YES)
-            row.pack(side=TOP, padx=5, pady=5)
+            row.pack(side=TOP, fill=X, padx=5, pady=5)
             lab.pack(side=LEFT)
-            ent.bind('<Return>', self.test)
             ent.pack(side=RIGHT, expand=YES, fill=X)
             entries[field] = ent
-            i +=1
         return entries
-
 
     def input(self, inputVar):
         label = Label(self, text=inputVar)

@@ -4,6 +4,7 @@ CREATED by Arthur_
 
 from tkinter import *
 from form import *
+from tkinter import filedialog
 
 
 def form():
@@ -19,13 +20,16 @@ def form():
 
     fields = ('Path to the exe', 'Path to the infected exe', 'Name of the section')
     entries = interface.makeform(fields)
-    interface.bind('<Return>', (event, print(entries.get())))
-    print(entries)
-    interface.infect()
+    b1 = Button(interface, text='Inject',
+                command=(lambda e=entries: interface.infect(e)))
+    btn = Button(text='Browse a file', command=lambda: Form.browseButton(interface))
+    btn.pack(side=RIGHT, expand=YES)
+    b1.pack()
+
+
     interface.close()
 
     # PYTHON TU ES DU VOMIS DE CHAT QUAND JE LANCE UNE FONCTION PREND LES ARGUMENT LA PAS AVANT SALLE VACHE TU PU T MOCHE
-
     interface.mainloop()
 
 
@@ -40,5 +44,14 @@ def center_window(root,w=700, h=700):
     x = (width_screen/2) - (w/2)
     y = (height_screen/2) - (h/2)
     root.geometry('%dx%d+%d+%d' % (w, h, x, y))
+
+
+def browseButton(self):
+    file = filedialog.askopenfile(mode='rb', title='Browse a file', filetypes=[('Exe files', '*.exe')])
+    if file != None:
+        data = file.read()
+        print(data)
+        file.close()
+    print(file)
 
 form()
