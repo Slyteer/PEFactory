@@ -15,15 +15,16 @@ def form():
     center_window(window)
 
     interface = Form(window)
-
-
-
     fields = ('Path to the exe', 'Path to the infected exe', 'Name of the section')
+
     entries = interface.makeform(fields)
     b1 = Button(interface, text='Inject',
                 command=(lambda e=entries: interface.infect(e)))
+
     b1.pack()
 
+    btn = Button(text='Browse a file', command=lambda: Form.browseButton(interface))
+    btn.pack(side=RIGHT, expand=YES)
 
     interface.close()
 
@@ -48,7 +49,6 @@ def browseButton(self):
     file = filedialog.askopenfile(mode='rb', title='Browse a file', filetypes=[('Exe files', '*.exe')])
     if file != None:
         data = file.read()
-        print(data)
         file.close()
     print(file)
 
