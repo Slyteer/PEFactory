@@ -22,12 +22,6 @@
     <list default="true" id="9f822ad9-91a0-457c-b461-f6d08d6c7792" name="Default Changelist" comment="test commit from pycharm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test Arthur Exploit/Tentative du 13 05.py" beforeDir="false" afterPath="$PROJECT_DIR$/Test Arthur Exploit/Tentative du 13 05.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Arthur Exploit/inf3.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Arthur Exploit/inf4.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Arthur Exploit/inf5.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Arthur Exploit/infected.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Arthur Exploit/infectedtest.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test Arthur Exploit/infectest2.exe" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,28 +81,7 @@
       <recent name="C:\Users\Arthur\Desktop\Projet annuel\PEFactory\Test Arthur Exploit" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="Tentative du 13 05" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="PEFactory" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test Arthur Exploit" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test Arthur Exploit/Tentative du 13 05.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.main (1)">
     <configuration name="cli_PEFactoty" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PEFactory" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -153,6 +126,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PEFactory" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test Arthur Exploit" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test Arthur Exploit/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PEFactory" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -167,6 +161,27 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test-Jonas/GraphiqueTest1/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PEFactory" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Test Arthur Exploit" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Arthur\Desktop\Projet annuel\PEFactory\Test Arthur Exploit\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -199,11 +214,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.Tentative du 13 05" />
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.testForm" />
         <item itemvalue="Python.guitest" />
-        <item itemvalue="Python.cli_PEFactoty" />
       </list>
     </recent_temporary>
   </component>
