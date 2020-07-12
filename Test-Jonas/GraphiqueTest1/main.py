@@ -1,5 +1,5 @@
 """ INTERFACE GRAPHIQUE DU LOGICIEL PEFACTORY
-CREATED by Arthur_
+CREATED by Arthur_Jonas
 """
 
 from tkinter import *
@@ -23,8 +23,8 @@ def form():
 
     b1.pack()
 
-    btn = Button(text='Browse a file', command=lambda: Form.browseButton(interface))
-    btn.pack(side=RIGHT, expand=YES)
+    #btn = Button(text='Browse a file', command=lambda: Form.browseButton(interface))
+    #btn.pack(side=RIGHT, expand=YES)
 
     interface.close()
 
