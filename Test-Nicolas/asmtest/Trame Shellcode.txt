@@ -19,4 +19,3 @@ Create .c file to test =
 
 gcc -fno-stack-protector -z execstack -o exec exec.c
 
-
