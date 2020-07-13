@@ -30,3 +30,4 @@ message:
     msg db "Hello, world!"
 
 section .data
+
