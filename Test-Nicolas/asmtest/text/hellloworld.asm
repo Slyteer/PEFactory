@@ -17,5 +17,5 @@ _start:                                         ;Communique au linker le point d
 
 section     .data
 
-msg     db  'Coucou, je suis là! otjkreotkgoerktorektorektoerktoerktoperktporektoperktoprektoprketop',0xa          ;Le message que l'on souhaite afficher
+msg     db  'Coucou, je suis là! otjkreotkgoerktorektorektoerktoerktoperktporektoperktoprektoprketop',0xa           ;Le message que l'on souhaite afficher
 len     equ $ - msg                             ;Calcul de la longueur du message qui va etre deplacer dans le registre edx
